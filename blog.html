@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="flex items-center justify-between p-4 bg-base-100 shadow-md">
+
+        
+        <a class="btn btn-info w-28 hidden" href="blog.html" id="btn-blog">Blog</a>
+        <a class="btn btn-info w-28" href="home.html" id="btn-home">Home</a>
+
+
+ 
+        <div class="flex items-center space-x-2 ml-2">
+            <img src="assets/logo.png" class="w-8 h-8" alt="Logo">
+            <span class="text-xl text-neutral-950 font-semibold">Donate Bangladesh</span>
+        </div>
+
+
+        <div class="flex items-center space-x-2">
+            <img src="assets/coin.png" alt="Coin Icon" class="w-5 h-5">
+            <p class="text-neutral-950 font-medium">5500 BDT</p>
+        </div>
+    </section>
+    <div class="flex justify-center">
+        <button id="btn-donation" class="btn btn-info m-5">
+            <a href="home.html">Donation</a>
+        </button>
+        <button id="btn-history" class="btn btn-info m-5">
+            <a href="History.html">History</a>
+        </button>
+    </div>
+    <h1 class="text-left mb-6 ml-4 text-3xl font-bold">Important FAQ</h1>
+    
+    <section class="flex flex-col items-start px-4 w-full">
+        <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-200 w-full mb-4">
+            <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+            <div class="collapse-content">
+                <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of an HTML or XML document as a tree of objects, allowing developers to interact with and manipulate the content, structure, and styling of the document programmatically.</p>
+            </div>
+        </div>
+        
+        <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-200 w-full mb-4">
+            <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+            <div class="collapse-content">
+                <p>To select elements from the DOM in JavaScript, use <code>getElementById("id")</code> for a specific element by its unique ID, returning one element. For classes, <code>getElementsByClassName("className")</code> selects all elements with a specific class, returning a collection. You can also select by tag name using <code>getElementsByTagName("tagName")</code>, which returns all matching elements of a specific tag. For more complex selections, <code>querySelector("selector")</code> returns the first element matching a CSS selector, while <code>querySelectorAll("selector")</code> returns all matching elements, giving more flexibility with attribute and hierarchy-based selections. Each method allows you to find and manipulate elements as needed.</p>
+            </div>
+        </div>
+        
+        <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-200 w-full mb-4">
+            <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+            <div class="collapse-content">
+                <p>Event delegation is a technique in the DOM where a single event listener is added to a parent element to handle events from its child elements. Instead of attaching individual listeners to each child, the parent listens for events that bubble up from the children. This approach is efficient because it reduces the number of listeners and can handle dynamic elements added later. It’s especially useful for managing events on lists or tables where items are frequently added or removed. Event delegation improves performance and simplifies code by consolidating event handling.</p>
+            </div>
+        </div>
+        
+        <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-200 w-full mb-4">
+            <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+            <div class="collapse-content">
+                <p>To manipulate an element's attributes and styles in the DOM, you can use <code>setAttribute</code> and <code>getAttribute</code> to set and retrieve attribute values. For direct modifications, access properties like <code>id</code> or <code>className</code> to quickly update these common attributes. Styles are adjusted via the <code>style</code> property, allowing you to set inline CSS (e.g., <code>element.style.color = "blue"</code>). To manage CSS classes, the <code>classList</code> API provides methods like <code>add</code>, <code>remove</code>, and <code>toggle</code> for easy, modular styling. This approach makes it simple to dynamically adjust attributes and styles.</p>
+            </div>
+        </div>
+    </section>
+    <script src="all.js"></script>
+</body>
+</html>
