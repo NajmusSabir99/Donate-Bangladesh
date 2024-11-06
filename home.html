@@ -9,28 +9,25 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <section class="flex items-center justify-between p-4 bg-base-100 shadow-md">
+    <section class="flex flex-col bg-[#fbf4e6]  shadow-md sticky top-0 justify-between  py-4 px-6 backdrop-blur-sm z-30">
 
-        
-        <a class="btn btn-info w-28" href="blog.html" id="btn-blog">Blog</a>
-        <a class="btn btn-info w-28 hidden" href="home.html" id="btn-home">Home</a>
+        <nav class="flex  justify-between p-4  sticky top-0">
+            <a class="btn btn-info w-28" href="blog.html" id="btn-blog">Blog</a>
+            <a class="btn btn-info w-28 hidden" href="home.html" id="btn-home">Home</a>
 
- 
-        <div class="flex items-center space-x-2 ml-2">
-            <img src="assets/logo.png" class="w-8 h-8" alt="Logo">
-            <span class="text-xl text-neutral-950 font-semibold">Donate Bangladesh</span>
-        </div>
+    
+            <div class="flex items-center space-x-2 ml-2">
+                <img src="assets/logo.png" class="w-8 h-8" alt="Logo">
+                <span class="text-xl text-neutral-950 font-semibold">Donate Bangladesh</span>
+            </div>
 
 
-        <div class="flex items-center">
-            <img src="assets/coin.png" alt="Coin Icon" class="w-5 h-5">
-            <p class="text-neutral-950 font-medium pl-1" id="orginial-balance">5500</p>
-        </div>
-        
-        
-    </section>
-    <main class="flex flex-col items-center">
-        <div class="flex justify-center">
+            <div class="flex items-center">
+                <img src="assets/coin.png" alt="Coin Icon" class="w-5 h-5">
+                <p class="text-neutral-950 font-medium pl-1" id="orginial-balance">5500</p>
+            </div>
+        </nav>
+        <div class="mx-auto">
             <button id="btn-donation" class="btn btn-info m-5">
                 <a href="home.html">Donation</a>
             </button>
@@ -38,6 +35,9 @@
                 <a href="History.html">History</a>
             </button>
         </div>
+    </section>
+    <main class="flex flex-col items-center">
+        
         
         
         
