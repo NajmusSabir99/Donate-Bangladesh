@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section class="flex flex-col shadow-md sticky top-0 justify-between py-4 px-6 backdrop-blur-sm z-30">
+
+        <nav class="flex  justify-between p-4  sticky top-0">
+            <a class="btn btn-info w-28" href="blog.html" id="btn-blog">Blog</a>
+            <a class="btn btn-info w-28 hidden" href="home.html" id="btn-home">Home</a>
+
+    
+            <div class="flex items-center space-x-2 ml-2">
+                <img src="assets/logo.png" class="w-8 h-8" alt="Logo">
+                <span class="text-xl text-neutral-950 font-semibold">Donate Bangladesh</span>
+            </div>
+
+
+            <div class="flex items-center">
+                <img src="assets/coin.png" alt="Coin Icon" class="w-5 h-5">
+                <p class="text-neutral-950 font-medium pl-1" id="orginial-balance">5500</p>
+            </div>
+        </nav>
+        <div class="mx-auto">
+            <button id="btn-donation" class="btn btn-info m-5">
+                <a href="home.html">Donation</a>
+            </button>
+            <button id="btn-history" class="btn btn-neutral m-5">
+                <a href="History.html">History</a>
+            </button>
+        </div>
+    </section>
+    <main class="flex flex-col items-center">
+        
+        
+        
+        
+
+        <!-- Card Noakhali Start-->
+         <section id="donationSection">
+            <div class="border-solid border-2 border-sky-500 card lg:card-side bg-base-100 shadow-xl flex flex-col sm:flex-row justify-center items-center w-full sm:w-4/5 mx-auto my-5 p-4">
+                <img class="w-full sm:w-1/2 h-auto sm:h-64 object-cover m-2 sm:ml-10" src="/assets/noakhali.png" alt="Noakhali">
+                <div class="card-body text-center sm:text-left">
+                    <div class="flex justify-center sm:justify-start items-center gap-0">
+                        <img src="assets/coin.png" alt="Coin Icon" class=" h-5 size-7">
+                        <p id="balance-noakhali" class="text-neutral-950 font-medium w-3/6">1000</p>
+                    </div>
+                    
+                    <h2 class="card-title">Donate for flood at Noakhali, Bangladesh</h2>
+                    <p class="text-sm sm:text-base">The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes a difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                    <div class="card-actions flex flex-col items-center sm:items-start">
+                        <input type="text" id = "input-noakhali" placeholder="Write Donation Amount" class="input input-bordered input-info w-full sm:w-72 max-w-xs my-2" />
+                        <button id = "btn-donate-noakhali" class="btn btn-info w-full sm:w-72">Donate Now</button>
+                    </div>
+                </div>
+            </div>
+        <!-- Card Noakhali Ends-->
+         
+       <!-- Card Feni Start-->
+<div class="border-solid border-2 border-sky-500 card lg:card-side bg-base-100 shadow-xl flex flex-col sm:flex-row justify-center items-center w-full sm:w-4/5 mx-auto my-5 p-4">
+    <img class="w-full sm:w-1/2 h-auto sm:h-64 object-cover m-2 sm:ml-10" src="/assets/feni.png" alt="Feni">
+    <div class="card-body text-center sm:text-left">
+        <div class="flex justify-center sm:justify-start items-center">
+            <img src="assets/coin.png" alt="Coin Icon" class="w-5 h-5">
+            <p id="balance-feni" class="text-neutral-950 font-medium w-3/6">0</p>
+        </div>
+        <h2 class="card-title">Donate for flood at Feni, Bangladesh</h2>
+        <p class="text-sm sm:text-base">The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity.</p>
+        <div class="card-actions flex flex-col items-center sm:items-start">
+            <input type="text" id="input-feni" placeholder="Write Donation Amount" class="input input-bordered input-info w-full sm:w-72 max-w-xs my-2" />
+            <button id="btn-donate-feni" class="btn btn-info w-full sm:w-72">Donate Now</button>
+        </div>
+    </div>
+</div>
+<!-- Card Feni Ends-->
+
+<!-- Card Quota Start-->
+<div class="border-solid border-2 border-sky-500 card lg:card-side bg-base-100 shadow-xl flex flex-col sm:flex-row justify-center items-center w-full sm:w-4/5 mx-auto my-5 p-4">
+    <img class="w-full sm:w-1/2 h-auto sm:h-64 object-cover m-2 sm:ml-10" src="/assets/feni.png" alt="Quota Movement">
+    <div class="card-body text-center sm:text-left">
+        <div class="flex justify-center sm:justify-start items-center">
+            <img src="assets/coin.png" alt="Coin Icon" class="w-5 h-5">
+            <p id="balance-quota" class="text-neutral-950 font-medium w-3/6">0</p>
+        </div>
+        <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
+        <p class="text-sm sm:text-base">The recent Quota movement has resulted in numerous injuries. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected.</p>
+        <div class="card-actions flex flex-col items-center sm:items-start">
+            <input type="text" id="input-quota" placeholder="Write Donation Amount" class="input input-bordered input-info w-full sm:w-72 max-w-xs my-2" />
+            <button id="btn-donate-quota" class="btn btn-info w-full sm:w-72">Donate Now</button>
+        </div>
+    </div>
+</div>
+<!-- Card Quota Ends-->
+
+    </section>
+        <!-- Card Quota Ends-->
+    </main>
+
+
+
+    <div id="modal" class="fixed inset-0 items-center justify-center hidden">
+        <div class="bg-white p-6 rounded shadow-lg text-center">
+            <h3 class="text-lg font-bold">Congrats!</h3>
+            <div  class=" flex justify-center">
+                <img  src="./assets/coin.png" alt="Coin" class="h-6" >
+                <p class="text-gray-600">You Have Donated for Humankind Successfully</p>
+            </div>
+            
+            <button onclick="closeModal()" class="btn btn-info text-white px-4 py-2 rounded mt-4">Close Confirmation</button>
+        </div>
+     </div>
+
+     <section id="historySection" class="hidden">
+        
+     </section>
+
+
+
+    <footer class="footer bg-slate-200 text-neutral-content items-center h-32 p-4 mt-6">
+    </footer>
+    <script src="all.js"></script>
+</body>
+</html>
