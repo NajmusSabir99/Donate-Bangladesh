@@ -39,12 +39,17 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
         totalNoakhali += inputNoakhali;
         document.getElementById('balance-noakhali').innerText = totalNoakhali + " BDT";
         totalBalance -= inputNoakhali;
+        addDonationHistory(inputNoakhali, 'Flood at Noakhali, Bangladesh');
         document.getElementById('orginial-balance').innerText = totalBalance + " BDT";
         document.getElementById('input-noakhali').value = '';
-        addDonationHistory(inputNoakhali, 'Flood at Noakhali, Bangladesh');
+        document.getElementById('modal').classList.remove('hidden');
+        
     } else {
         alert("Please enter a valid donation amount.");
     }
+
+
+    
 });
 
 // Feni Donation Logic
@@ -55,13 +60,16 @@ document.getElementById('btn-donate-feni').addEventListener('click', function() 
         totalFeni += inputFeni;
         document.getElementById('balance-feni').innerText = totalFeni + " BDT";
         totalBalance -= inputFeni;
+        addDonationHistory(inputFeni, 'Flood Relief in Feni, Bangladesh');
         document.getElementById('orginial-balance').innerText = totalBalance + " BDT"; 
         document.getElementById('input-feni').value = '';
+        document.getElementById('modal').classList.remove('hidden');
         
-        addDonationHistory(inputFeni, 'Flood Relief in Feni, Bangladesh');
     } else {
         alert("Please enter a valid donation amount.");
     }
+
+    
 });
 
 // Quota Donation Logic
@@ -72,23 +80,39 @@ document.getElementById('btn-donate-quota').addEventListener('click', function()
         totalQuota += inputQuota;
         document.getElementById('balance-quota').innerText = totalQuota + " BDT";
         totalBalance -= inputQuota;
+        addDonationHistory(inputQuota, 'Aid for Injured in the Quota Movement');
         document.getElementById('orginial-balance').innerText = totalBalance + " BDT"; 
         document.getElementById('input-quota').value = '';
-       
-        addDonationHistory(inputQuota, 'Aid for Injured in the Quota Movement');
+        document.getElementById('modal').classList.remove('hidden');
+        
+        
     } else {
         alert("Please enter a valid donation amount.");
     }
+ 
+    
+
+    
 });
+function closeModal() {
+    document.getElementById('modal').classList.add('hidden');
+}
+
 const historySection = document.getElementById('historySection');
 
 function addDonationHistory(amount, cause) {
     const currentDate = new Date().toLocaleString("en-BD", { timeZone: "Asia/Dhaka" });
-    const donationEntry = `
-        <div class="bg-white border border-gray-200 p-5 rounded-lg mb-4">
-            <p class="font-semibold">${amount} BDT is donated for ${cause}</p>
-            <span class="text-sm text-gray-500">Date: ${currentDate}</span>
-        </div>
+    
+    const donationEntry = document.createElement("div");
+
+    donationEntry.className = "bg-white border border-gray-200 p-5 rounded-lg mb-4";
+
+    donationEntry.innerHTML = `
+        <p class="font-semibold">${amount} BDT is donated for ${cause}</p>
+        <span class="text-sm text-gray-500">Date: ${currentDate}</span>
     `;
-    historySection.insertAdjacentHTML('afterbegin', donationEntry);
+    
+    historySection.appendChild(donationEntry);
+
 }
+
